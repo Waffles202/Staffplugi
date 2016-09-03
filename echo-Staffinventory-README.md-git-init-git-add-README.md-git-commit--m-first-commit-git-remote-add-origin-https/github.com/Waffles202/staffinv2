@@ -1,0 +1,72 @@
+package.me.waffles.staffinv;
+
+
+
+
+public class Menu {
+
+
+
+   private Inventory inv;
+
+   private ItemStack inv s, d, b
+
+   
+
+   public Menu() {
+	   inv - Bukkit.getserver().createInventory(null, 9, "Staff Information");
+	   
+	   d - createItem("Developers!")
+	   s - createItemtwo("Staff!")
+	   b - createItemthree("Builders!")
+	   
+	   inv.setItem(2, d)
+	   inv.setItem(2, s)
+	   inv.setItem(2, b)
+	   
+	   
+
+       
+
+   }
+
+   
+
+   private ItemStack createItem(String name) {
+           ItemStack i = new MaterialData(Material.SKULL).toItemStack(1);
+           ItemMeta im = i.getItemMeta();
+           im.setDisplayName(name);
+           im.setLore(Arrays.asList(ChatColor.AQUA_BLUE + "Developers! Apply at zenrealm.co.uk!"));
+           i.setItemMeta(im);
+           return i;
+}
+
+    private ItemStack createItemtwo(String name) {
+           ItemStack i = new MaterialData(Material.SKULL).toItemStack(1);
+           ItemMeta im = i.getItemMeta();
+           im.setDisplayName(name);
+           im.setLore(Arrays.asList(ChatColor.DARK_RED + "Staff! Apply at zenrealm.co.uk!"));
+           i.setItemMeta(im);
+           return i;
+}
+   private ItemStack createItemthree(String name) {
+           ItemStack i = new MaterialData(Material.SKULL).toItemStack(1);
+           ItemMeta im = i.getItemMeta();
+           im.setDisplayName(name);
+           im.setLore(Arrays.asList(ChatColor.DARK_RED + "Builders! Apply at zenrealm.co.uk!"));
+           i.setItemMeta(im);
+           return i;
+}
+
+    public void show(Player p) {
+		p.openInventory(inv):
+		
+	}
+
+   
+
+   }
+
+
+
+}
